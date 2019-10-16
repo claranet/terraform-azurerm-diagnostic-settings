@@ -1,16 +1,16 @@
 data "azurerm_monitor_diagnostic_categories" "main" {
-  resource_id = var.resource_id
+  resource_id = var.resource_ids[0]
 }
 
 locals {
   log_categories = (
     var.log_categories != null ?
-    var.log_categories :
+    toset(var.log_categories) :
     data.azurerm_monitor_diagnostic_categories.main.logs
   )
   metric_categories = (
     var.metric_categories != null ?
-    var.metric_categories :
+    toset(var.metric_categories) :
     data.azurerm_monitor_diagnostic_categories.main.metrics
   )
 
@@ -30,8 +30,10 @@ locals {
 }
 
 resource "azurerm_monitor_diagnostic_setting" "main" {
+  for_each = var.enabled ? toset(var.resource_ids) : set([])
+
   name               = var.name
-  target_resource_id = var.resource_id
+  target_resource_id = each.value
 
   storage_account_id             = var.storage_account_id
   log_analytics_workspace_id     = var.log_analytics_workspace_id

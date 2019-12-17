@@ -4,6 +4,11 @@ variable "name" {
   description = "The name of the diagnostic setting."
 }
 
+variable "resources_count" {
+  type        = number
+  description = "The number of resources to configure. Must be the (non computed) size of the `resource_ids` list due to Terraform limitation."
+}
+
 variable "resource_ids" {
   type        = list(string)
   description = "The IDs of the resources list. The resources must be the same type."
@@ -30,12 +35,6 @@ variable "metric_categories" {
   }))
   default     = null
   description = "List of metric categories."
-}
-
-variable "enabled" {
-  type        = bool
-  default     = true
-  description = "Either `true` to enable diagnostic settings or `false` to disable it."
 }
 
 variable "retention_days" {

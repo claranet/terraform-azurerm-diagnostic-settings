@@ -8,12 +8,12 @@ locals {
   log_categories = (
     var.log_categories != null ?
     toset(var.log_categories) :
-    var.resources_count > 0 ? data.azurerm_monitor_diagnostic_categories.main[0].logs : null
+    var.resources_count > 0 ? data.azurerm_monitor_diagnostic_categories.main[0].logs : toset([])
   )
   metric_categories = (
     var.metric_categories != null ?
     toset(var.metric_categories) :
-    var.resources_count > 0 ? data.azurerm_monitor_diagnostic_categories.main[0].metrics : null
+    var.resources_count > 0 ? data.azurerm_monitor_diagnostic_categories.main[0].metrics : toset([])
   )
 
   logs = {

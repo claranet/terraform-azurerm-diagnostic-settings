@@ -1,5 +1,5 @@
 # Azure Diagnostic Settings
-[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![Notice](https://img.shields.io/badge/notice-copyright-yellow.svg)](NOTICE) [![Apache V2 License](https://img.shields.io/badge/license-Apache%20V2-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/claranet/diagnostic-settings/azurerm/)
+[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![Notice](https://img.shields.io/badge/notice-copyright-blue.svg)](NOTICE) [![Apache V2 License](https://img.shields.io/badge/license-Apache%20V2-orange.svg)](LICENSE) [![OpenTofu Registry](https://img.shields.io/badge/opentofu-registry-yellow.svg)](https://search.opentofu.org/module/claranet/diagnostic-settings/azurerm/)
 
 This module is based on work from [Innovation Norway](https://github.com/InnovationNorway/).
 
@@ -44,62 +44,21 @@ More details about variables set by the `terraform-wrapper` available in the [do
 [Hashicorp Terraform](https://github.com/hashicorp/terraform/). Instead, we recommend to use [OpenTofu](https://github.com/opentofu/opentofu/).
 
 ```hcl
-
-module "lb" {
-  source  = "claranet/lb/azurerm"
-  version = "x.x.x"
-
-  client_name    = var.client_name
-  environment    = var.environment
-  location       = module.azure_region.location
-  location_short = module.azure_region.location_short
-  stack          = var.stack
-
+resource "azurerm_lb" "lb" {
+  location            = module.azure_region.location
+  name                = "lb"
   resource_group_name = module.rg.resource_group_name
-
-  allocate_public_ip = true
-  enable_nat         = true
-}
-
-module "eventhub" {
-  source  = "claranet/eventhub/azurerm"
-  version = "x.x.x"
-
-  location       = module.azure_region.location
-  location_short = module.azure_region.location_short
-  client_name    = var.client_name
-  environment    = var.environment
-  stack          = var.stack
-
-  resource_group_name = module.rg.resource_group_name
-
-  create_dedicated_cluster = false
-
-  namespace_parameters = {
-    sku      = "Standard"
-    capacity = 2
-  }
-
-  hubs_parameters = {
-    logs = {
-      custom_name     = "main-logs-hub"
-      partition_count = 2
-    }
-  }
-
-  logs_destinations_ids = []
 }
 
 module "diagnostic_settings" {
   source  = "claranet/diagnostic-settings/azurerm"
   version = "x.x.x"
 
-  resource_id = module.lb.lb_id
+  resource_id = azurerm_lb.lb.id
 
   logs_destinations_ids = [
     module.logs.logs_storage_account_id,
     module.logs.log_analytics_workspace_id,
-    format("%s|%s", module.eventhub.namespace_send_authorization_rule.id, module.eventhub.eventhubs["logs"].name),
   ]
 
   log_analytics_destination_type = "Dedicated"

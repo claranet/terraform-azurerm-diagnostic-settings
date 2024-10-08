@@ -57,8 +57,7 @@ module "diagnostic_settings" {
   resource_id = azurerm_lb.lb.id
 
   logs_destinations_ids = [
-    module.logs.logs_storage_account_id,
-    module.logs.log_analytics_workspace_id,
+    azurerm_log_analytics_workspace.log_workspace.id
   ]
 
   log_analytics_destination_type = "Dedicated"

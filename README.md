@@ -102,7 +102,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | id | ID of the Diagnostic Settings. |
-| resource | Diagnostic settings output. |
+| resource | Diagnostic settings resource output. |
 <!-- END_TF_DOCS -->
 ## Related documentation
 

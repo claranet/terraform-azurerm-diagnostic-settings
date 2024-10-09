@@ -4,6 +4,6 @@ output "id" {
 }
 
 output "resource" {
-  description = "Diagnostic settings output."
+  description = "Diagnostic settings resource output."
   value       = azurerm_monitor_diagnostic_setting.main[*]
 }

@@ -1,7 +1,7 @@
 resource "azurerm_lb" "lb" {
   location            = module.azure_region.location
   name                = "lb"
-  resource_group_name = module.rg.resource_group_name
+  resource_group_name = module.rg.name
 }
 
 module "diagnostic_settings" {

@@ -1,3 +1,39 @@
+## 8.0.0 (2024-10-09)
+
+### ⚠ BREAKING CHANGES
+
+* **AZ-1088:** rework module
+
+### Features
+
+* **AZ-1088:** rework module 5a8547f
+
+### Bug Fixes
+
+* **AZ-1088:** fix Gitlab CI fceebdd
+* **AZ-1088:** to revert when all modules in v8 eafb3bc
+
+### Documentation
+
+* **AZ-1088:** add missing parameter in example f506158
+* **AZ-1088:** fix `logs_destinations_ids` variable description dcd0f95
+* **AZ-1088:** fix parameters in example c7b64dc
+
+### Miscellaneous Chores
+
+* **AZ-1088:** apply suggestions 218f7e0
+* **AZ-1088:** fix pre-commit config b265399
+* **AZ-1088:** fix README and Examples cb0a716
+* **AZ-1088:** fix wrong filename / fix example 53eb1b7
+* **AZ-1088:** use new resource output description 323add2
+* **deps:** update dependency opentofu to v1.8.3 73b3a2d
+* **deps:** update dependency pre-commit to v4 1ea5ac1
+* **deps:** update dependency pre-commit to v4.0.1 e639984
+* **deps:** update dependency trivy to v0.56.0 ffda632
+* **deps:** update dependency trivy to v0.56.1 e69ee10
+* **deps:** update pre-commit hook pre-commit/pre-commit-hooks to v5 edb5855
+* update examples structure 65bc7df
+
 ## 7.0.0 (2024-10-03)
 
 ### ⚠ BREAKING CHANGES

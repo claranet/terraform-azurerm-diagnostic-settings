@@ -18,8 +18,8 @@ locals {
 
   metrics = {
     for metric in try(data.azurerm_monitor_diagnostic_categories.main[0].metrics, []) : metric => {
-      enabled = contains(local.metric_categories, metric)
-    }
+      enabled = true
+    } if contains(local.metric_categories, metric)
   }
 
   storage_id       = coalescelist([for r in var.logs_destinations_ids : r if contains(split("/", lower(r)), "microsoft.storage")], [null])[0]

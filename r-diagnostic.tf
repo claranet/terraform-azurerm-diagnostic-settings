@@ -22,7 +22,7 @@ resource "azurerm_monitor_diagnostic_setting" "main" {
     for_each = local.metrics
 
     content {
-      category = metric.key
+      category = enabled_metric.key
     }
   }
 

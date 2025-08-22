@@ -1,3 +1,55 @@
+## 8.1.0 (2025-08-22)
+
+### Features
+
+* **deprecation:** ✨ update deprecated code (metric bloc) 8388fb7
+
+### Miscellaneous Chores
+
+* **⚙️:** ✏️ update template identifier for MR review 03f2cd8
+* 🗑️ remove old commitlint configuration files bfc335c
+* apply suggestion dcd8dfe
+* **deps:** update dependency opentofu to v1.10.0 5b866c1
+* **deps:** update dependency opentofu to v1.10.1 1005d86
+* **deps:** update dependency opentofu to v1.10.3 3829138
+* **deps:** update dependency opentofu to v1.8.4 35de337
+* **deps:** update dependency opentofu to v1.8.6 4f3239f
+* **deps:** update dependency opentofu to v1.8.8 df9ecc2
+* **deps:** update dependency opentofu to v1.9.0 e3ae2a0
+* **deps:** update dependency opentofu to v1.9.1 3c63e05
+* **deps:** update dependency pre-commit to v4.1.0 5c37b4c
+* **deps:** update dependency pre-commit to v4.2.0 ef006eb
+* **deps:** update dependency terraform-docs to v0.20.0 b4ea828
+* **deps:** update dependency tflint to v0.54.0 31280bc
+* **deps:** update dependency tflint to v0.55.0 a39477d
+* **deps:** update dependency tflint to v0.57.0 3a76383
+* **deps:** update dependency tflint to v0.58.0 3d9d387
+* **deps:** update dependency tflint to v0.58.1 6a36c94
+* **deps:** update dependency trivy to v0.56.2 952ecb7
+* **deps:** update dependency trivy to v0.57.1 f79b272
+* **deps:** update dependency trivy to v0.58.1 2408322
+* **deps:** update dependency trivy to v0.58.2 88095ed
+* **deps:** update dependency trivy to v0.59.1 531dc80
+* **deps:** update dependency trivy to v0.60.0 c697ae4
+* **deps:** update dependency trivy to v0.61.1 4fb1aa7
+* **deps:** update dependency trivy to v0.62.0 c1f4f0d
+* **deps:** update dependency trivy to v0.62.1 c9edc56
+* **deps:** update dependency trivy to v0.63.0 9ced865
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.19.0 f02fc58
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.20.0 de90105
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.21.0 0321b11
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.22.0 2ac4859
+* **deps:** update pre-commit hook pre-commit/pre-commit-hooks to v6 802e67c
+* **deps:** update tools bee7e98
+* **deps:** update tools a88510d
+* **deps:** update tools 0068288
+* **deps:** update tools 2d93e04
+* **deps:** update tools 2c772fe
+* **deps:** update tools a4f7199
+* **deps:** update tools 839757d
+* update Github templates 1f8a58a
+* update tflint config for v0.55.0 ba0974e
+
 ## 8.0.0 (2024-10-09)
 
 ### ⚠ BREAKING CHANGES

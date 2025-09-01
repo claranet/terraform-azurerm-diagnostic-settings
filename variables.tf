@@ -33,6 +33,6 @@ EOD
 
 variable "log_analytics_destination_type" {
   type        = string
-  default     = "AzureDiagnostics"
+  default     = "Dedicated"
   description = "When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table."
 }

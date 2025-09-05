@@ -1,3 +1,14 @@
+## 8.2.0 (2025-09-05)
+
+### Features
+
+* use dedicated table by default 9c89f2d
+
+### Miscellaneous Chores
+
+* **deps:** update dependency tflint to v0.59.1 eb80b4e
+* **deps:** update dependency trivy to v0.66.0 b2da625
+
 ## 8.1.0 (2025-08-22)
 
 ### Features

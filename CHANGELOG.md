@@ -1,3 +1,13 @@
+## 8.2.1 (2025-09-30)
+
+### Code Refactoring
+
+* **deps:** 🔗 update claranet/azurecaf to ~> 1.3.0 🔧 edb12a2
+
+### Miscellaneous Chores
+
+* **deps:** update dependency opentofu to v1.10.6 0a29279
+
 ## 8.2.0 (2025-09-05)
 
 ### Features

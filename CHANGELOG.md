@@ -1,3 +1,23 @@
+## 9.0.0 (2026-08-14)
+
+### ⚠ BREAKING CHANGES
+
+* **SREAA-368:** Minimum OpenTofu version raised from >= 1.8 to >= 1.12 and
+minimum AzureRM provider version raised from ~> 4.31 to ~> 5.0. Consumers
+must upgrade OpenTofu to >= 1.12 and the AzureRM provider to ~> 5.0 (see the
+official AzureRM 5.0 upgrade guide) before consuming this module version;
+Terraform (non-OpenTofu) usage remains unverified.
+
+### Features
+
+* **SREAA-368:** upgrade module to v9 (OpenTofu >= 1.12, AzureRM ~> 5.0) 8694fd9
+
+### Miscellaneous Chores
+
+* **deps:** update dependency opentofu to v1.12.5 0f3a3da
+* **deps:** update dependency tflint to v0.64.0 3f70ad2
+* **v9:** 🐛 synchronize common files and docs 52e646a
+
 ## 8.2.5 (2026-07-20)
 
 ### Bug Fixes

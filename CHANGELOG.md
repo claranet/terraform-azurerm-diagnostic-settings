@@ -1,3 +1,9 @@
+## 9.0.1 (2026-08-24)
+
+### Documentation
+
+* **agents:** 📝 resync AGENTS.md from the ci template 6855c32
+
 ## 9.0.0 (2026-08-14)
 
 ### ⚠ BREAKING CHANGES
